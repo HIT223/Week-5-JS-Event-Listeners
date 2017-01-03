@@ -7,7 +7,7 @@
 */
 
 /*
-* TASK 2: switch to classes and a flexible event handler
+* TASK 3: Toggle heights instead of colours
 */
 
 /* Wrap code in self-calling function to keep global scope clean*/
