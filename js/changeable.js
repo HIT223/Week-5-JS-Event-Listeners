@@ -13,32 +13,32 @@
 /* Wrap code in self-calling function to keep global scope clean*/
 (function(){
 
-	var paragraphs = document.querySelectorAll('.changeable');
 
 	/*
 	* Check for addEventListner function attached to the Element class
 	*/
 	if(Element.prototype.addEventListener){
-		addToggleFunctionality();
+		var items = document.querySelectorAll('.changeable');
+		addToggleFunctionality(items);
 	}
 
 	/*
 	* Add event listener to button click
 	*/
-	function addToggleFunctionality(){
+	function addToggleFunctionality(items){
 		/* Loop through our paragraphs */
-		for (var i = 0; i < paragraphs.length; i++) {
+		for (var i = 0; i < items.length; i++) {
 			/* We'll need this for insertBefore() */
-			var row = paragraphs[i].parentElement;
+			var parent = items[i].parentElement;
 
-			/* create a container div so we can isolate each p and button pair */
+			/* create a container div so we can animate to a specific height */
 			var container = document.createElement('div');
 			container.classList.add('changeable__container');
 
-			/* insert our container right before the paragraph it's replacing */
-			row.insertBefore(container, paragraphs[i]);
-			/* move the paragraph into the container */
-			container.appendChild(paragraphs[i]);
+			/* insert our container right before the item it's replacing */
+			parent.insertBefore(container, items[i]);
+			/* move the item into the container */
+			container.appendChild(items[i]);
 
 			/*
 			* set height of containers to 0px so they default to closed
@@ -49,7 +49,7 @@
 			var button = createButton("Read more");
 			button.addEventListener('click', clickListener);
 			/* add our button to the container */
-			row.insertBefore(button, container);
+			parent.insertBefore(button, container);
 		}
 	}
 
