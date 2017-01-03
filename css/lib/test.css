@@ -1,8 +1,23 @@
-.large_font{
-	font-size: 1.2em;
+.changeable{
+	margin-top: 0;
+	margin-bottom: 0;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.changeable__container{
+	overflow: hidden;
+	/*
+	* styles to make our height change smoothly
+	*/
+	transition-property: height;
+	transition-duration: 200ms;
+	transition-timing-function: linear;
 }
 
-
-.color_change{
-	color: blue;
-}
+/*.changeable__container--hidden{*/
+	/*
+	* !important overrides other styles
+	*/
+	/*height: 0px !important;*/
+/*}*/
