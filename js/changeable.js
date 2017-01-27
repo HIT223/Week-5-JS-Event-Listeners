@@ -48,7 +48,7 @@
 			/* create the button */
 			var button = createButton("Read more");
 			button.addEventListener('click', clickListener);
-			/* add our button to the container */
+			/* add our button to page, right before the container */
 			parent.insertBefore(button, container);
 		}
 	}
