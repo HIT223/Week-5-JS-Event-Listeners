@@ -1,23 +1,16 @@
-.changeable{
-	margin-top: 0;
-	margin-bottom: 0;
-
-	padding-top: 20px;
-	padding-bottom: 20px;
+.changeable {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.changeable__container{
-	overflow: hidden;
-	/*
+
+.changeable__container {
+  overflow: hidden;
+  /*
 	* styles to make our height change smoothly
 	*/
-	transition-property: height;
-	transition-duration: 200ms;
-	transition-timing-function: linear;
+  transition-property: height;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
 }
-
-/*.changeable__container--hidden{*/
-	/*
-	* !important overrides other styles
-	*/
-	/*height: 0px !important;*/
-/*}*/
